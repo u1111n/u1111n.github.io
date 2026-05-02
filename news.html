@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News - uiiiin</title>
+  <link rel="stylesheet" href="style.css">
+  <meta property="og:title" content="News - uiiiin">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://u1111n.github.io/news.html">
+  <meta property="og:image" content="https://u1111n.github.io/ogp.png">
+  <meta property="og:site_name" content="uiiiin">
+  <meta property="og:description" content="uiiiin Portfolio - News">
+</head>
+<body>
+  <header class="global-header">
+    <div class="logo">
+      <a href="/">uiiiin</a>
+    </div>
+    <nav class="top-menu">
+      <div class="menu-item">
+        <a href="works.html">Works</a>
+      </div>
+      <div class="menu-item">
+        <a href="biography.html">Biography</a>
+      </div>
+      <div class="menu-item active">
+        <a href="news.html">News</a>
+      </div>
+    </nav>
+  </header>
+  <main id="news-content" class="text-content">
+    <p class="loading">Loading from Scrapbox...</p>
+  </main>
+  <script src="script.js"></script>
+  <script>
+    window.onload = () => fetchSinglePageContent('news', 'news-content');
+  </script>
+</body>
+</html>

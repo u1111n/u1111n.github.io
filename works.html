@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Works - uiiiin</title>
+  <link rel="stylesheet" href="style.css">
+  <meta property="og:title" content="Works - uiiiin">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://u1111n.github.io/works.html">
+  <meta property="og:image" content="https://u1111n.github.io/ogp.png">
+  <meta property="og:site_name" content="uiiiin">
+  <meta property="og:description" content="uiiiin Portfolio - Works">
+</head>
+<body class="index-body">
+  <div id="hover-preview-container">
+    <img id="hover-preview-image" alt="">
+  </div>
+
+  <header class="global-header">
+    <div class="logo">
+      <a href="/">uiiiin</a>
+    </div>
+    <nav class="top-menu">
+      <div class="menu-item active">
+        <a href="works.html">Works</a>
+      </div>
+      <div class="menu-item">
+        <a href="biography.html">Biography</a>
+      </div>
+      <div class="menu-item">
+        <a href="news.html">News</a>
+      </div>
+    </nav>
+  </header>
+  <main class="list-container">
+    <div id="works-list">
+      <p class="loading">Loading works...</p>
+    </div>
+  </main>
+  <script src="script.js"></script>
+  <script>
+    window.onload = () => fetchScrapboxData('works');
+  </script>
+</body>
+</html>
