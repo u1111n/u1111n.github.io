@@ -76,6 +76,9 @@ function scrapboxToHtml(text, extractTitle = true) {
         const iconName = content.replace('.icon', '');
         return `<img src="${PROXY_BASE}/api/pages/${PROJECT_NAME}/${encodeURIComponent(iconName)}/icon" class="scrapbox-icon">`;
       }
+      if (content.toLowerCase() === 'works') {
+        return `<a href="works.html" class="scrapbox-tag">${content}</a>`;
+      }
       return `<a href="viewer.html?page=${encodeURIComponent(content)}" class="scrapbox-tag">${content}</a>`;
     });
     const indentMatch = line.match(/^(\s+)(.*)/);
