@@ -1,5 +1,5 @@
 /* --- Font Import --- */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@100;300;400;700&family=Noto+Serif+JP:wght@100;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..700&family=Quicksand:wght@300..700');
 
 /* --- Base Styles --- */
 body {
@@ -8,7 +8,7 @@ body {
     background-color: #F8F9FB;
     /* 指定のブルー */
     color: #000;
-    font-family: "Noto Serif JP", serif;
+    font-family: "Noto Sans JP", serif;
     -webkit-font-smoothing: antialiased;
     font-weight: 100;
     /* 日本語を Thin に */
@@ -46,11 +46,12 @@ a:hover {
 }
 
 .logo a {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 400;
     font-size: 1.2rem;
-    font-weight: 300;
+    letter-spacing: 0.6em;
     /* 2. blockではなくinline-blockに（ベースラインを有効にするため） */
     display: inline-block;
-    letter-spacing: 0.2em;
     line-height: 1;
     margin: 0;
     padding: 0;
@@ -69,14 +70,14 @@ a:hover {
     display: inline-block;
     line-height: 1;
     margin: 0;
-    /* margin-bottom: 8px を完全に削除 */
 }
 
 .menu-item a {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.3em;
     font-size: 1.2rem;
-    letter-spacing: 0.2em;
-    font-weight: 300;
-    color: rgba(0, 0, 0, 0.4);
+    color: #46546261;
     transition: color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     /* 4. ここも line-height を1にして高さをロゴと統一 */
     line-height: 1;
@@ -140,50 +141,6 @@ a:hover {
     /* 下の余白 */
 }
 
-/* 個々の作品カード */
-.work-card {
-    display: flex;
-    flex-direction: column;
-    transition: opacity 0.3s ease;
-}
-
-.work-card:hover {
-    opacity: 0.7;
-    /* ホバー時に少し薄くする */
-}
-
-.card-link {
-    display: block;
-    width: 100%;
-    text-decoration: none;
-}
-
-/* 画像エリア */
-.card-image {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    /* 画像の比率を16:9に固定 */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-bottom: 15px;
-    /* タイトルとの間隔 */
-    border-radius: 2px;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    /* 薄い枠線（任意） */
-}
-
-/* タイトルエリア */
-.card-info h3 {
-    margin: 0;
-    font-size: 1.1rem;
-    /* 少し小さめに調整 */
-    font-weight: 300;
-    letter-spacing: 0.1em;
-    line-height: 1.4;
-    color: #000;
-}
-
 /* --- Mobile / Tablet Styles (上書き用) --- */
 @media screen and (max-width: 768px) {
     #works-grid {
@@ -215,30 +172,28 @@ a:hover {
 
 .text-content h1 {
     font-size: 1.8rem;
-    font-weight: 100;
+    font-weight: 300;
     letter-spacing: 0.1em;
     margin-bottom: 2.2rem;
     line-height: 2.5rem;
 }
 
 .text-content h2 {
+    font-weight: 300;
+    letter-spacing: 0.2rem;
     font-size: 1.5rem;
     margin-bottom: 1.2rem;
     padding-bottom: 0.6rem;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-    font-weight: 300;
-    letter-spacing: 0.1em;
+    border-bottom: 0.5px solid #8caac3;
 }
 
 .text-content p {
     font-size: 0.85rem;
+    font-weight: 300;
     margin-top: 0;
-    margin-bottom: 0.4rem;
-    line-height: 1.6rem;
-    letter-spacing: 0.0rem;
-    color: rgba(0, 0, 0, 0.9);
-    font-weight: 400;
-    letter-spacing: 0.075em;
+    margin-bottom: 0.2rem;
+    line-height: 1.4rem;
+    letter-spacing: 0.1rem;
 }
 
 /* --- UI Elements --- */
@@ -264,7 +219,7 @@ a:hover {
 .filter-btn {
     background: none;
     border: none;
-    color: rgba(0, 0, 0, 0.4);
+    color: #465462;
     font-family: "Noto Serif JP", serif;
     font-size: 1.2rem;
     font-weight: 300;
@@ -291,7 +246,7 @@ a:hover {
 }
 
 .work-row {
-    border-bottom: 0.5px solid rgba(140, 170, 195, 78);
+    border-bottom: 0.5px solid #8caac3;
     transition: border-color 0.3s;
 }
 
@@ -302,7 +257,7 @@ a:hover {
 .title-area h3 {
     margin: 0;
     font-size: 1.8rem;
-    font-weight: 100;
+    font-weight: 300;
     letter-spacing: 0.15em;
     line-height: 1.8rem;
 }
@@ -338,7 +293,7 @@ a:hover {
 
 /* 外部リンクのスタイル */
 .external-link {
-    color: #000;
+    color: #465462;
     display: inline-block;
     max-width: 100%;
     overflow-wrap: anywhere;
@@ -356,7 +311,7 @@ a:hover {
 
 /* 内部リンク（タグ風）と区別する場合 */
 .scrapbox-tag {
-    color: #000;
+    color: #465462;
     text-underline-offset: 4px;
     transition: opacity 0.3s;
     opacity: 0.6;
@@ -372,8 +327,12 @@ a:hover {
     border-left: 1px solid rgba(0, 0, 0, 0.2);
     padding-left: 15px;
     margin: 0.75em 0;
-    font-weight: 400;
-    letter-spacing: 0.075em;
+    font-size: 0.85rem;
+    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: 0.2rem;
+    line-height: 1.4rem;
+    letter-spacing: 0.1rem;
 }
 
 .text-content img {
@@ -706,15 +665,16 @@ pre.code-block code {
 
     /* 4. 本文テキストの調整 */
     .text-content h2 {
-        font-size: 1.2rem;
-        margin-top: 0.25rem;
+        font-size: 1.1rem;
+        letter-spacing: 0.15rem;
+        margin-bottom: 0.6rem;
     }
 
     .text-content p {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
         /* 本文をわずかに小さく */
-        line-height: 1.4rem;
-        letter-spacing: 0.05em;
+        line-height: 1.2rem;
+        letter-spacing: 0.075em;
     }
 
     .indent {
@@ -723,8 +683,10 @@ pre.code-block code {
         margin-right: 0px;
         margin-bottom: 0.2em;
         margin-left: 0px;
-        font-size: 0.8rem;
-        line-height: 1.4rem;
+        font-size: 0.75rem;
+        /* 本文をわずかに小さく */
+        line-height: 1.2rem;
+        letter-spacing: 0.075em;
     }
 
     /* 5. モバイルで不要な要素を非表示 */
